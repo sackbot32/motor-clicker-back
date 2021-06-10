@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--
+alumno
+15 abr. 2021
+-->
+<html lang="es" xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://kit.fontawesome.com/095ee4657f.js" data-crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" data-integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+		<form action="/usuariospremiosCrud/editar" method="get">
+			<label for="nombre">Nombre</label>
+			<input type="text" name="cantidad" th:value="${usuariopremio.cantidad}"/>
+			<input type="hidden"  name="id" th:value="${usuariopremio.idusuariopremio}" />
+			<input type="submit" value="Editar" />
+		</form>
+		<a href="/usuariospremiosCrud/lista">Volver a listado de usuarios premios</a>

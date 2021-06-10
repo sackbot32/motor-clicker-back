@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+alumno
+15 abr. 2021
+-->
+<html lang="es" xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://kit.fontawesome.com/095ee4657f.js" data-crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" data-integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+		<form action="/premiosCrud/editar" method="get">
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre" th:value="${premio.nombre}"/>
+			<br />
+			<label for="precio">Precio</label>
+			<input type="text" name="precio" th:value="${premio.precio}"/>
+			<br />
+			<label for="produce">Produce</label>
+			<input type="text" name="produce" th:value="${premio.produce}"/>
+			<br />
+			<label for="foto">Foto</label>
+			<input type="text" name="foto" th:value="${premio.foto}" />
+			<br />
+			<input type="hidden"  name="id" th:value="${premio.idpremio}" />
+			<input type="submit" value="Editar" />
+		</form>
+		<a href="/premiosCrud/lista">Volver a listado de premios</a>
